@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bali-env/static/css/main.c1645376.css",
+    "main.js": "/bali-env/static/js/main.402e61d9.js",
+    "index.html": "/bali-env/index.html",
+    "main.c1645376.css.map": "/bali-env/static/css/main.c1645376.css.map",
+    "main.402e61d9.js.map": "/bali-env/static/js/main.402e61d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1645376.css",
+    "static/js/main.402e61d9.js"
+  ]
+}
