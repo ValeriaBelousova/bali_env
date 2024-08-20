@@ -7,8 +7,11 @@ import type { RootState } from './store';
 import { HexLayer } from './components/layer';
 import { Toolbox } from './components/toolbox';
 import { FlowLayer } from './components/layer-flow';
+import { Basemaps } from './components/basemaps';
 
 function App() {
+  //"https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+  const basemap_url = useSelector((state: RootState) => state.map.basemap);
   const showModal = useSelector((state: RootState) => state.modal.visible);
   const hex_data = useSelector((state: RootState) => state.hex.hex_data);
   const isHexVisible = useSelector((state: RootState) => state.switch.visible_hex);
@@ -25,8 +28,9 @@ function App() {
         <MapContainer id="map" center={defaultLatLng} zoom={14}>
           { isHexVisible ? <HexLayer hex={hex_data} /> : null }
           { isFlowVisible ? <FlowLayer /> : null}
-          <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"/>
+          <TileLayer url={basemap_url}/>
         </MapContainer>
+        <Basemaps />
         
       </div>
   );

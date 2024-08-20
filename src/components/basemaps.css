@@ -1,0 +1,19 @@
+.basemapButton {
+    position: absolute;
+    bottom: 20px;
+    right: 72vw;
+    z-index: 1000;
+  }
+  .basemapPopoverW {
+    max-width: 400px;
+  }
+  .popoverGrid {
+    display: flex;
+    flex-direction: row;
+    margin: 3px;
+    padding-right: 10px;
+  }
+  .popoverTitle {
+    margin: 8px;
+  }
+  
