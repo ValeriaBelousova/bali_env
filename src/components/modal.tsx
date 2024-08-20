@@ -2,9 +2,15 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useDispatch } from 'react-redux';
 import { setModalVisible } from "../reducers/modal-reducer";
+import { setHexData } from "../reducers/hex-reducer";
 
 export const ModalResult = () => {
   const dispatch = useDispatch()
+
+  const seeChanges = () => {
+    dispatch(setModalVisible());
+    dispatch(setHexData(1));
+  }
 
   return (
     <div
@@ -21,7 +27,7 @@ export const ModalResult = () => {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="primary" onClick={() => dispatch(setModalVisible())}>See changes</Button>
+          <Button variant="primary" onClick={seeChanges}>See changes</Button>
         </Modal.Footer>
       </Modal.Dialog>
     </div>

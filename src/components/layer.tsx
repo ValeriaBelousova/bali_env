@@ -12,11 +12,13 @@ export const HexLayer = (props: any) => {
             opacity = 0.8;
         }
         if (N_acc > 1 && N_acc <= 10) {
-            color = '#b81702';
+            //color = '#b81702';
+            color = '#ffff66';
             opacity = 0.8;
         }
         if (N_acc > 10 && N_acc <= 100) {
-            color = '#a50104';
+            //color = '#a50104';
+            color = '#ff9900';
             opacity = 0.8;
         }
         if (N_acc > 100 && N_acc <= 1000) {
@@ -28,7 +30,7 @@ export const HexLayer = (props: any) => {
             opacity = 0.8;
         }
         return {
-          color: "white",
+          color: '#dcdcdc',
           fillOpacity: opacity,
           fillColor: color,
         };
